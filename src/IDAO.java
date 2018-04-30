@@ -1,6 +1,6 @@
 import java.util.List;
 
-public interface DAO
+public interface IDAO
 {
     public Person findPersonByNmae(String name);      //通过姓名查找人员
     public Person findPersonByID(int id);            //通过ID查找人员

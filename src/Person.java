@@ -49,6 +49,7 @@ class artist extends Person
     artist(String name, int id, int age, String sex, int wages, int unfinishWorks)
     {
         super(name, id, age, sex, wages, unfinishWorks);
+        workProduction = new artistWorkProduction(unfinishWorks);
     }
 }
 
@@ -58,6 +59,7 @@ class designer extends Person
     designer(String name, int id, int age, String sex, int wages, int unfinishWorks)
     {
         super(name, id, age, sex, wages, unfinishWorks);
+        workProduction = new designerWorkProduction(unfinishWorks);
     }
 }
 
@@ -75,7 +77,7 @@ class test
     }
 }
 
-//////////////////////////////////工作进度的方便迭代设计模式///////////////////////////////////
+//////////////////////////////////工作进度的方便修改迭代设计模式///////////////////////////////////
 //工作进度接口
 interface IworkProduction
 {

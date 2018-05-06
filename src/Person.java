@@ -1,4 +1,4 @@
-import java.io.Console;
+import java.util.List;
 
 public abstract class Person
 {
@@ -6,12 +6,12 @@ public abstract class Person
     int id;
     int age;
     String sex;
-    int wages;
+    float wages;
     int unfinishWorks;
 
     IworkProduction workProduction;
 
-    Person(String name, int id, int age, String sex, int wages, int unfinishWorks)
+    Person(String name, int id, int age, String sex, float wages, int unfinishWorks)
     {
         this.name = name;
         this.id = id;
@@ -36,7 +36,7 @@ public abstract class Person
 //程序员类
 class programmar extends Person
 {
-    programmar(String name, int id, int age, String sex, int wages, int unfinishWorks)
+    programmar(String name, int id, int age, String sex, float wages, int unfinishWorks)
     {
         super(name, id, age, sex, wages, unfinishWorks);
         workProduction = new programmarWorkProduction(unfinishWorks);
@@ -46,7 +46,7 @@ class programmar extends Person
 //美术类
 class artist extends Person
 {
-    artist(String name, int id, int age, String sex, int wages, int unfinishWorks)
+    artist(String name, int id, int age, String sex, float wages, int unfinishWorks)
     {
         super(name, id, age, sex, wages, unfinishWorks);
         workProduction = new artistWorkProduction(unfinishWorks);
@@ -56,7 +56,7 @@ class artist extends Person
 //策划类
 class designer extends Person
 {
-    designer(String name, int id, int age, String sex, int wages, int unfinishWorks)
+    designer(String name, int id, int age, String sex, float wages, int unfinishWorks)
     {
         super(name, id, age, sex, wages, unfinishWorks);
         workProduction = new designerWorkProduction(unfinishWorks);
@@ -72,8 +72,14 @@ class test
     }
     public static void main(String[] args)
     {
-        test t =new test();
-        t.test();
+        programmar ax = new programmar("a",1,20,"男",10000,0);
+//       test t =new test();
+//        t.test();
+//        List<Person>  a =  XMLtest.allPerson();
+        Database_behave a = new Database_behave("Xml","C:\\Users\\你父亲的笔电\\Documents\\GitHub\\Java_homework\\src\\DB.xml");
+        System.out.println(a.findPersonByID(1).toString());
+        Database_behave b = new Database_behave("Access","C:\\Users\\你父亲的笔电\\Documents\\GitHub\\Java_homework\\src\\mydb.mdb");
+        System.out.println(b.findPersonByID(1).toString());
     }
 }
 

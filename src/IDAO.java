@@ -7,6 +7,6 @@ public interface IDAO
     public boolean addPerson(Person person);            //添加人员
     public boolean delletePerson(int id);           //删除人员
     public List<Person> allPositionPerson(String positionName);         //查找该职位的所有人员
-    public boolean changeWages(int id);         //改变工资
+    public boolean changeWages(int id, float Newages);         //改变工资
     public List<Person> allPerson();            //查找所有人
 }

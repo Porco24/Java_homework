@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><root>
+    
+    <Person id="2" type="artist">
+        <name>asd</name>
+        <sex>male</sex>
+        <age>21</age>
+        <wages>5</wages>
+        <unfinishWorks>2</unfinishWorks>
+    </Person>
+    <Person id="3" type="designer">
+        <name>zxc</name>
+        <sex>male</sex>
+        <age>21</age>
+        <wages>5</wages>
+        <unfinishWorks>3</unfinishWorks>
+    </Person>
+    <Person id="4" type="designer">
+        <name>dfsg</name>
+        <sex>male</sex>
+        <age>21</age>
+        <wages>5</wages>
+        <unfinishWorks>3</unfinishWorks>
+    </Person>
+<Person id="1" type="programmar"><name>a</name><sex>男</sex><age>20</age><wages>10000.0</wages><unfinishWorks>0</unfinishWorks></Person></root>
